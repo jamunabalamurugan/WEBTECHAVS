@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <p> Array Functions</p>
+        <input id='data' size=30>
+        <button onclick="addfunc(document.getElementById('data').value)">Add</button>
+        <button onclick="delfunc()">Remove</button>"
+        <p id="demo"></p>
+        <script>
+            var cities=['delhi', 'kolkatta', 'chennai'];
+            document.getElementById("demo").innerHTML=cities;
+
+            function addfunc(v)
+            {
+                cities.push(v);
+                document.getElementById("demo").innerHTML=cities;
+            }
+
+            function delfunc()
+            {
+                cities.pop();
+                document.getElementById("demo").innerHTML=cities;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var y = 0;
+        function Addition(a, b) {
+            return a + b;
+        }
+        function myOverFunction() {
+            document.getElementById("demo3").innerHTML = y += 1;
+        }
+    </script>
+</head>
+<body onload="prompt('How are you today');">
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+    <button onclick="document.getElementById('demo1').innerHTML=Addition(4, 5)">Addition</button>
+
+    <p id="demo"></p>
+    <p id="demo1">Addition Result will be displayed here!!</p>
+    <div onmouseover="myOverFunction()">
+        <p>onmouseover: <br> <span id="demo3">Mouse over me!</span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        #divLogin {
+            position: relative;
+            left: 450px;
+            top: 200px;
+            width: 300px;
+        }
+    </style>
+    <script>
+        var usernames = ["ramu", "bimu"];
+        var user = {
+            "username": "ramu",
+            "password":"1234"
+        }
+        var users = [
+            {
+                "username": "ramu",
+                "password": "1234"
+            },
+            {
+                "username": "somu",
+                "password": "4321"
+            },
+            {
+                "username": "bimu",
+                "password": "1111"
+            }
+        ]
+        function register() {
+            //usernames.push(document.getElementById("txtUsername").value);
+            var un = document.getElementById("txtUsername").value;
+            var pass = document.getElementById("txtPassword").value
+            var flag = 0;
+            for (var i = 0; i < users.length; i++) {
+                if (un == users[i].username && pass == users[i].password) {
+                    console.log("valid user");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0)
+                console.log("invalid user");
+        }
+    </script>
+</head>
+<body>
+    <!--<button id="btnOne">Click Me</button>
+    <button id="btnTwo">Sample</button>
+    <input type="text" id="txtName" />-->
+    <div id="divLogin">
+        <label class="form-control">username</label>
+        <input id="txtUsername" type="text" class="form-control" />
+        <label class="form-control">password</label>
+        <input id="txtPassword" type="password" class="form-control" />
+        <button id="btnRegister" class="btn btn-primary" onclick="register()">Register</button>
+        <div id="divMsg"></div>
+    </div>
+</body>
+</html>

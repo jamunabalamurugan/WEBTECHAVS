@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>User Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        #divRegister {
+            position: relative;
+            left: 450px;
+            top: 200px;
+            width: 300px;
+        }
+        #tblUsers {
+            position: relative;
+            margin: 10px;
+            left: 450px;
+            top: 250px;
+            float: left;
+        }
+    </style>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(() => {
+            var users = [
+                {
+                    "username": "ramu",
+                    "age": 23
+                },
+                {
+                    "username": "somu",
+                    "age": 20
+                },
+                {
+                    "username": "bimu",
+                    "age": 31
+                }
+            ]
+            for (var i = 0; i < users.length; i++) {
+                var temp = "<tr><td>" + users[i].username + "</td><td>" + users[i].age + "</td></tr>";
+                $("tbody").append(temp);   
+            }
+            $("#btnRegister").click(() => {
+                var un = $("#txtUsername").val();
+                var age = $("#txtAge").val();
+                var tag = "<tr><td>" + un + "</td><td>" + age + "</td></tr>";
+                console.log(un + " " + age);
+                $("tbody").append(tag);
+            });
+            $("#btn1").click(() => $("#div1").fadeToggle(1000));
+        });
+    </script>
+</head>
+<body>
+    <div id="divRegister">
+       <label class="form-control">username</label>
+        <input id="txtUsername" type="text" class="form-control" />
+        <label class="form-control">age</label>
+        <input id="txtAge" type="number" class="form-control" />
+        <button id="btnRegister" class="btn btn-primary">Register</button>
+    </div>
+    <table border="1" id="tblUsers">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+            <tbody>
+           
+            </tbody>
+    </table>
+    <button id="btn1" class="btn btn-success">Click me </button>
+    <div id="div1" class="alert alert-success">
+        Check this out
+    </div>
+</body>
+</html>

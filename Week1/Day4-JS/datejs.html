@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <h1> Javascript Date Functions</h1>
+        <p id="mycurrentdate"></p>
+        <p id="mymonth"></p>
+        <p id="myday"></p>
+        <script>
+            var cd= new Date();
+            var month= new Date();
+            var day=new Date();
+            //cd=cd.getDate();
+            cd.setDate(cd.getDate());
+            document.getElementById("mycurrentdate").innerHTML=cd;
+
+            month.setDate(month.getMonth());
+            document.getElementById("mymonth").innerHTML=month;
+
+            day.setDate(day.getUTCDay());
+            document.getElementById("myday").innerHTML=day;
+        </script>
+    </body>
+</html>
+
+
+
+<!--<html>
+    <head>
+        <script>
+            function checkempty(txtdata, errmsg)
+            {
+                if(txtdata.value.length==0)
+                {
+                    alert(errmsg);
+                   // txtdata.focus();
+                    return false;
+                }
+                document.getElementById("test").innerHTML=txtdata.value;
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <p id ="test"></p>
+            <form>
+                User Name : <input type="text" id="t1">
+                <input type="button" onclick="checkempty(document.getElementById('t1'),'please enter name')" value='Check'/>
+            </form>
+        
+    </body>
+</html>-->
+
+
+
+
+

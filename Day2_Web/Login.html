@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="Style1.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+                /*body {
+                    background-color: lightcoral;
+                }
+        */
+                #divForm {
+                    height: 450px;
+                    width: 30%;
+                }
+
+                form {
+                    position: relative;
+                    left: 60%;
+                    top: 30%
+                }
+    </style>
+    <script>
+        function loginClick() {
+            //alert("Hello World!!");
+            //var num1 = "10";
+            //num1 = num1 + 10;
+            var un = document.getElementById("txtUsername").value;
+            if (un == "") {
+                document.getElementById("errUsername").style.visibility = "visible";
+                //alert("username cannot be empty");
+                document.getElementById("txtUsername").focus();
+                // return;
+            }
+            else
+                document.getElementById("errUsername").style.visibility = "hidden";
+
+            var pass = document.getElementById("txtPassword").value;
+            if (pass == "") {
+                //alert("password cannot be empty");
+                document.getElementById("errPassword").style.visibility = "visible";
+
+                document.getElementById("txtPassword").focus();
+                //    return;
+            }
+            else {
+                document.getElementById("errPassword").style.visibility = "visible";
+                document.getElementById("errPassword").innerHTML = "Username cannot be empty";
+                document.getElementById("errPassword").classList.add("alert alert-danger")
+                //document.getElementById("errPassword").style.visibility = "hidden";
+            }
+
+
+            // alert("done");
+        }
+        function usernameCheck() {
+            var un = document.getElementById("txtUsername").value;
+            if (un == "") {
+                document.getElementById("errUsername").style.visibility = "visible";
+                //document.getElementById("txtUsername").style.borderColor = "red";
+                //alert("username cannot be empty");
+                document.getElementById("errUsername").innerHTML = "Username cannot be empty";
+                document.getElementById("errUsername").classList.add("alert-danger");
+                document.getElementById("txtUsername").focus();
+                // return;
+            }
+            else {
+                document.getElementById("errUsername").style.visibility = "visible";
+                document.getElementById("errUsername").innerHTML = "Good. Way to go..";
+                document.getElementById("errUsername").classList.remove("alert-danger");
+                document.getElementById("errUsername").classList.add("alert-success");
+            }
+            //document.getElementById("txtUsername").style.borderColor = "green";
+            //document.getElementById("errUsername").style.visibility = "hidden";
+        }
+        function frmSubmit() {
+            //console.log("form");
+            //if (un == "")
+            //    return false;
+            //else
+            //    return true;
+            var un = document.getElementById("txtUsername").value;
+            if (un == "") {
+                var para = document.createElement("p");
+                var data = document.createTextNode("Please check your entries");
+                para.appendChild(data);
+                document.getElementById("divForm").appendChild(para);
+                //alert("hello");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="divForm">
+        <form > 
+              <!--class="form-group" style="background-color:lightblue;color:navy;">-->
+            <label class="form-control" for="txtUsername">Username</label>
+            <input class="form-control" type="text" id="txtUsername" onblur="usernameCheck()" pattern="[U][0-9][0-9][0-9]" />
+            <span style="visibility:hidden" class="alert alert-danger" id="errUsername"></span>
+            <label class="form-control" for="txtPassword">Password</label>
+            <input class="form-control" type="password" id="txtPassword" />
+            <span style="visibility:hidden" class="alert alert-danger" id="errPassword">Password cannot be empty</span>
+            <button class="btn btn-success" onclick="frmSubmit()">Login</button>
+            <button class="btn btn-danger">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<!--onclick="loginClick()"-->

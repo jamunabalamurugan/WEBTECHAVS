@@ -1,0 +1,99 @@
+<!--<html>
+    <head>
+        <body>
+            <script>
+                function change()
+                {
+                    var paragraphs=document.getElementsByTagName("p");
+                    document.getElementById("second").innerHTML=paragraphs[0].innerHTML;
+                    alert("Data Changed");
+                    document.write("Original Data Changed..");
+                    
+                }
+
+            </script>
+
+            <h1>Paragraphs Tag Collection</h1>
+            <hr>
+            <div id="second">
+            <p >This Javascript will explain TagNames Functionality</p>
+            <p>This is Para 2</p>
+            <p>This is Para 3</p>
+            <button onclick="change()">Click me to see Changes</button>
+           </div>
+            
+        </body>
+    </head>
+</html>-->
+
+<!--<html>
+    <head>
+        <body>
+            Hello World! Welcome to Javascript
+            <br><br>
+            Type Something :<input id="saythis" size=40>
+            <p>How Many Times? <select id="howmany">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3 selected>3</option>
+                <option value=4>6</option>
+                <option value=7>7</option>
+                <option value=9>9</option>
+                
+            </select>
+            <button onclick="doLoop()">Do It Now!</button>
+            <div id="output"></div>
+            <script>
+                function doLoop()
+                {
+                    var saywhat=document.getElementById("saythis").value;
+                    
+                    var maxloop=document.getElementById("howmany").value;
+                    var str='';
+                    for(var i=1;(i<=maxloop);i++)
+                    {
+                        str=str+i +":"+ saywhat+"<br>";
+                    }
+                    document.getElementById("output").innerHTML=str;
+                }
+
+            </script>
+            </body>
+    </head>
+</html>-->
+<html>
+    <head>
+        <BODY>
+            <h1>SORTING OF ARRAY VALUES USING COMPARE METHOD</h1>
+            <button onclick="func1()">Ascending sort</button>
+            <button ondblclick="func2()">Descending Sort</button>
+            <br>
+            <br>
+            <p id="demo"></p>            
+
+            <script>
+                var marks=['40','100','81','58','75','63'];
+                document.getElementById("demo").innerText=marks;
+
+                /*var a='56';
+                var b= a+1;  //561
+                var b=parseInt(a)+1; //57*/
+                function func1()
+                {
+                    marks.sort(function(a,b){return a-b});
+                    document.getElementById("demo").innerText=marks;
+                }
+
+                function func2()
+                {
+                    marks.sort(function(a,b){return b-a});
+                    document.getElementById("demo").innerText=marks;
+                }
+               // var sortedmarks=marks.sort();
+                //document.getElementById("demo").innerHTML=sortedmarks;
+            </script>
+        </BODY>
+    </head>
+</html>
+
+

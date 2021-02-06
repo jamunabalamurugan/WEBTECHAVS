@@ -1,0 +1,32 @@
+DOM - Document Object Model
+html
+  head
+    title
+    style
+    script
+    link
+    meta
+  body
+    H1-h6
+    Div
+    P
+    Script
+    Table
+      tr
+        td
+      th
+    Ol/Ul/DL
+     li
+    a,nav
+    img
+    article
+    section
+    span
+
+CSS 
+  Internal - Style
+  External
+  Inline
+
+element{property:value;}
+    

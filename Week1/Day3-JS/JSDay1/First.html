@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Java Script Intro</title>
+    <script src="script1.js"> 
+        
+    </script>
+    <script>
+        function checkName()
+        {
+            var username = document.getElementById("txtName"); 
+            var username1 = document.getElementsByName("txtName"); 
+                console.log(username);
+                console.log(username1);
+                if(username.value == "")
+                {
+                    username.style.borderColor="orange";
+                    username.style.backgroundColor = "pink";
+                    username.focus();
+                }
+                else {
+                    username.style.borderColor = "darkgreen";
+                    username.style.backgroundColor = "green";
+
+                    //username.value="Mr/Ms."+username.value;
+                  
+                }
+        }
+       
+    
+    </script>
+   
+</head>
+<body>
+    <input id="txtName" name="txtName" type="text" onblur="checkName()" ><br/>
+    <input id="txtPW"  type="password" pattern="[0-9][0-9][0-9][0-9]" ><br/>
+    <button onclick="sample1();">Login</button>
+    
+</body>
+<script>
+    //alert("Welcome to Java Script");
+    function sample1()
+    {
+        var username=document.getElementById("txtName").value;
+        console.log(username);
+        
+
+    }
+
+</script>
+</html>

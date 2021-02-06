@@ -1,0 +1,41 @@
+
+<html>
+
+    <body>
+        <h1> Inbuilt Validations </h1>
+        <p id="test"></p>
+        Users Age:  <input id="i1" type ="number" min="13 " max="19" required>
+        <button onclick="teenagecheck()">OK</button>
+    
+        <script>
+            function teenagecheck()
+            {   
+               
+               var info="";
+               
+               /* var inputdata=document.getElementById("i1");
+                if(!inputdata.checkValidity())
+                {
+                    document.getElementById("test").innerHTML=inputdata.validationMessage;
+    
+                }
+                else
+                {
+                    document.getElementById("test").innerHTML="You are a Teenager";
+                }*/
+    
+                if(document.getElementById("i1").validity.rangeOverflow)
+                {
+                    info="Data is greater than the range";
+                    //document.getElementById("test").innerText=info;
+                }
+                else
+                {
+                    info="Data is fine";
+                 }
+                 document.getElementById("test").innerHTML=info;
+            }
+    
+        </script>
+    </body>
+    </html>

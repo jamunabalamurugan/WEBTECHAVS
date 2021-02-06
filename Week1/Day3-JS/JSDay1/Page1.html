@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <style>
+            .basic{
+                border:2px blue solid;
+            }
+            .err{
+                background-color:coral;
+            }
+            .usrmsg
+            {
+                background-color: darkred;
+            }
+            .val{
+                background-color: greenyellow;
+            }
+            .clsIn{
+                font-size: 2em;
+            }
+        </style>
+        <script src="script1.js"> 
+
+         </script>
+         
+    </head>
+    <body>
+        <div id="div1">
+            Hello in Div
+        </div>
+        <form name="frmLogin">
+            username: <input type="text" id="txtName" onblur="checkUsername()"/><span id="errUN">*</span>
+            <br>
+            password: <input type="password" id="txtPass"  onblur="checkPassword()"/><span id="errPass" >*</span>
+            <br>
+            <button class="btn btn-primary" onclick="checkData()" id="btnLogin" onmouseover="changeSize()" onmouseout="changeBack()">Login</button>
+        </form>
+        <!-- <input type="submit" value="Div Work"/> -->
+    </body>
+    <script>
+        
+        function checkUsername(){
+            var username = document.getElementById("txtName");
+            var msgUN = document.getElementById("errUN");
+            if(username.value == "")
+            {
+                username.style.borderColor = "red";
+                msgUN.innerHTML = "User name cannot be empty";
+                msgUN.classList.add("err");
+                username.focus();
+            }
+            else {
+                username.style.borderColor = "green";
+                msgUN.classList.remove("err");
+                msgUN.innerHTML = "";
+            }
+        }
+        function checkPassword(){
+            var password = document.getElementById("txtPass");
+            var msgPass = document.getElementById("errPass");
+            //msgUN.classList.add("basic");
+            if(password.value == "")
+            {
+                password.style.borderColor = "red";
+                msgPass.innerHTML = "Password cannot be empty";
+                //password.focus();
+                msgPass.classList.add("err");
+            }
+            else
+            {
+                password.style.borderColor = "green";
+                msgPass.innerHTML = "";
+                msgPass.classList.remove("err");
+            }
+            //alert("Welcome  "+username.value);  
+        }
+        function checkData(){
+            checkUsername();
+            checkPassword();
+        }
+        function changeSize(){
+            var btn = document.getElementById("btnLogin");
+            btn.classList.add("clsIn");
+        }
+        function changeBack(){
+            var btn = document["frmLogin"]["btnLogin"];
+            btn.classList.remove("clsIn");
+        }
+        //   function handleTextBox(){
+        //     var name = document.getElementById("txtName");
+        //     console.log(name.value);
+        // }
+        // function handleDiv(){
+        //     var container = document.getElementById("div1");
+        //     console.log("Div Content "+container.innerHTML);
+        // }
+     </script>
+</html>

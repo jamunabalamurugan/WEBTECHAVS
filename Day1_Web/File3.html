@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="txtName">Name</label>
+                </td>
+                <td>
+                    <input id="txtName" size="50" type="text" placeholder="plese enter name" required />
+                    <span>Error mgs</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtDOB">Date of birth</label>
+                </td>
+                <td>
+                    <input id="txtDOB" type="date" min="1982-01-01" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtColor">Fav Color</label>
+                </td>
+                <td>
+                    <input id="txtColor" type="color" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtAge">Age</label>
+                </td>
+                <td>
+                    <input id="txtAge" type="number" min="18" max="58" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txtAddress">Address</label>
+                </td>
+                <td>
+                    <textarea id="txtAddress" cols="50" rows="3"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Male" />Male
+                    <input type="radio" name="gender" value="Female" />Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Qualification</label>
+                </td>
+                <td>
+                    <input type="checkbox" value="UG" />UG
+                    <input type="checkbox" value="PG" />PG
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>City</label>
+                </td>
+                <td>
+                    <select>
+                        <option value="Agra">Agra</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Country</label>
+                </td>
+                <td>
+                    <input list="lstCountry" />
+                    <datalist id="lstCountry">
+                        <option>China</option>
+                        <option>India</option>
+                        <option>UK</option>
+                        <option>USA</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" />
+                </td>
+                <td>
+                    <input type="reset" />
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>

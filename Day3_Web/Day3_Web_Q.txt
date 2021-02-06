@@ -1,0 +1,13 @@
+Create a site for shopping flowers.
+Home page - Displays all the flowers available
+When user clicks on buy button take him to another page -> User details
+
+User details page-> 
+Name
+Age
+Phone
+Card Number
+CVV
+Day of Exp
+
+Show conifirmation page- static page

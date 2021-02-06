@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Demo</h1>
+</body>
+<script>
+    var color = new Array("Red", "blue", "Green", "Yellow",5,'1/7/2010');
+
+
+        Array.prototype.displayItems = function () {
+            for (let i = 0; i < this.length; i++) {
+                document.write(this[i] + "<br />");
+            }
+        }
+
+        document.write("color array<br />");
+        color.displayItems();
+        document.write("<br />The number of items in students array is " +    color.length + "<br />");
+        document.write("<br />The SORTED students array<br />");
+        color.sort();
+        color.displayItems();
+        color.push('White');
+
+        color.displayItems();
+        document.write("<br />The REVERSED students array<br />");
+        color.reverse();
+        color.pop();
+        color.displayItems();
+
+</script>
+</html>

@@ -1,0 +1,14 @@
+﻿body
+{
+    background-color:antiquewhite;
+    border: 2px maroon solid;
+}
+h1{
+    color:maroon;
+    font-family:'Monotype Corsiva';
+    text-align:center;
+}
+div{
+    background-color:gainsboro;
+    border: solid 2px white;
+}
